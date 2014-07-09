@@ -2,5 +2,6 @@
 ===========
 **By: Christian T Hill**
 
-Clone of 2048 that runs in the JavaScript console.
-It is written 360ish in pure JavaScript.
+Clone of 2048 that runs in the console.
+It is written in about 360 lines of pure JavaScript.
+Requires Google Chrome.
