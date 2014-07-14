@@ -131,39 +131,20 @@ var addRandomTile = function() {
 }
 
 var scanForMoves = function() {
-    for (var i = 0; i < 4; i++) {
-        for (var j = 0; j < 4; j++) {
+    for (var i = 0; i < 3; i++) {
+        for (var j = 0; j < 3; j++) {
             var thisTile = board[getBoardIndex(i, j)];
-            //check left
-            if (j > 0) {
-                var cTile = board[getBoardIndex(i, j - 1)];
-                if (cTile.exp == thisTile.exp || cTile.text == blank) {
-                    return true;
-                }
-            }
-
-            //check up
-            if (i > 0) {
-                var cTile = board[getBoardIndex(i - 1, j)];
-                if (cTile.exp == thisTile.exp || cTile.text == blank) {
-                    return true;
-                }
-            }
 
             //check right
-            if (j < 3) {
-                var cTile = board[getBoardIndex(i, j + 1)];
-                if (cTile.exp == thisTile.exp || cTile.text == blank) {
-                    return true;
-                }
+            var cTile = board[getBoardIndex(i, j + 1)];
+            if (cTile.exp == thisTile.exp || cTile.text == blank) {
+                return true;
             }
 
             //check down
-            if (i < 3) {
-                var cTile = board[getBoardIndex(i + 1, j)];
-                if (cTile.exp == thisTile.exp || cTile.text == blank) {
-                    return true;
-                }
+            var cTile = board[getBoardIndex(i + 1, j)];
+            if (cTile.exp == thisTile.exp || cTile.text == blank) {
+                return true;
             }
         }
     }
